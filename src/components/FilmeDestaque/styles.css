@@ -1,0 +1,98 @@
+.destaque {
+    height: 100vh;
+}
+.destaque--vertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+.destaque--horizontal {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 25%, transparent 75%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-bottom: 100px;
+    padding-top: 70px;
+}
+
+.destaque--titulo {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.destaque--info {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.destaque--info-pontos {
+    color: #46d369;
+}
+.destaque--info-ano, .destaque--info-pontos, .destaque--info-temporadas {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.destaque--sinopse {
+    margin-top: 20px;
+    color: #999;
+    font-size: 16px;
+    max-width: 40%;
+
+}
+
+.detaque--botoes {
+    margin-top: 20px;
+}
+.destaque--btn--assistir, .destaque--btn--minha-lista {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+.destaque--btn--assistir:hover, .destaque--btn--minha-lista:hover {
+    opacity: 0.8;
+}
+.destaque--btn--assistir {
+    background: #fff;
+    color: #111;
+}
+.destaque--btn--minha-lista {
+    background: #333;
+    color: #fff;
+}
+
+.detaque--generos {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #999;
+}
+
+@media (max-width: 760px) {
+    .destaque--sinopse {
+        max-width: 95%;
+        font-size: 14px;
+    }
+    .destaque--titulo {
+        font-size: 40px;
+    }
+    .destaque--info-ano, .destaque--info-pontos, .destaque--info-temporadas {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .destaque--btn--assistir, .destaque--btn--minha-lista {
+        font-size: 14px;
+        padding: 6px 12px
+    }
+    .detaque--generos {
+        font-size: 14px;
+    }
+}
