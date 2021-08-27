@@ -6,14 +6,14 @@ const ListaDeFilmes = () => {
 
     return (
         <div className='linhaDeFilmes'>
-            <ListaIndividualDeFilmes slug={'originais'} titulo={'Originais Netflix'} endpoint={'/discover/tv?with_network=213&'} />
-            <ListaIndividualDeFilmes slug={'trending'} titulo={'Recomendados para Você'} endpoint={'/trending/all/week?'} />
-            <ListaIndividualDeFilmes slug={'toprated'} titulo={'Em Alta'} endpoint={'/movie/top_rated?'} />
-            <ListaIndividualDeFilmes slug={'action'} titulo={'Ação'} endpoint={'/discover/movie?with_genres=28&'} />
-            <ListaIndividualDeFilmes slug={'comedy'} titulo={'Comédia'} endpoint={'/discover/movie?with_genres=35&'} />
-            <ListaIndividualDeFilmes slug={'horror'} titulo={'Terror'} endpoint={'/discover/movie?with_genres=27&'} />
-            <ListaIndividualDeFilmes slug={'romance'} titulo={'Romance'} endpoint={'/discover/movie?with_genres=10749&'} />
-            <ListaIndividualDeFilmes slug={'documentary'} titulo={'Documentários'} endpoint={'/discover/movie?with_genres=99&'} />
+            <ListaIndividualDeFilmes slug={'originais'} titulo={'Originais Netflix'} />
+            <ListaIndividualDeFilmes slug={'trending'} titulo={'Recomendados para Você'} />
+            <ListaIndividualDeFilmes slug={'toprated'} titulo={'Em Alta'} />
+            <ListaIndividualDeFilmes slug={'action'} titulo={'Ação'} />
+            <ListaIndividualDeFilmes slug={'comedy'} titulo={'Comédia'} />
+            <ListaIndividualDeFilmes slug={'horror'} titulo={'Terror'} />
+            <ListaIndividualDeFilmes slug={'romance'} titulo={'Romance'} />
+            <ListaIndividualDeFilmes slug={'documentary'} titulo={'Documentários'} />
         </div>
     )
 }

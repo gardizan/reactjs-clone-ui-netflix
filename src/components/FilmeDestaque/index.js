@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles.css'
 
-const FilmeDestaque = ({itemNew, generoNew}) => {
+const FilmeDestaque = ({ itemNew, generoNew }) => {
     const ano = new Date(itemNew.first_air_date)
-    return(
+    return (
         <section className='destaque' style={{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -23,10 +23,10 @@ const FilmeDestaque = ({itemNew, generoNew}) => {
                     <div className='detaque--botoes'>
                         <a className='destaque--btn--assistir' href={`/watch/${itemNew.id}`}>&#9658; Assistir</a>
                         <a className='destaque--btn--minha-lista' href={`/list/add/${itemNew.id}`}>+ Minha Lista</a>
-                    </div>                    
+                    </div>
                     <div className='detaque--generos'>
                         <strong>Gênero: </strong>{generoNew}
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </section>

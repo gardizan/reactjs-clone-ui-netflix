@@ -4,21 +4,25 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import useGet from '../../services/hooks/useGet';
 import basicFecth from '../../services/basicFecth';
+import completeFetch from '../../services/completeFetch';
+import { objectTypeAnnotation } from '@babel/types';
 
 
-const ListaIndividualDeFilmes = ({ slug, titulo, endpoint }) => {
+const ListaIndividualDeFilmes = ({ slug, titulo}) => {
 
     const [items, setItems] = useState(null) // items começa null para criarmos um IF
     const [scrollX, setScrollX] = useState(0)
 
+    
+
     // Esse useEffect tem a missão de incrementar a constante items, usando setItems.
     // Lembrando ser apenas uma vez, quando carrega o componente
     useEffect(() => {
-        basicFecth(endpoint).then(resposta => {
+        basicFecth(completeFetch()[getLista.slug]).then(resposta => {
             setItems(resposta.data)
         })
     }, [])
- 
+
     // A constante getLista salva as informações do Hook personalizado useGet.
     // Esse hook useGet tem como função enviar as informações passadas por parametro do componente
     // Intuito de ser criado dessa forma, foi alimentar um outro componente (ListaDeFilmes) deixando ele o mais próximo de um HTML 
