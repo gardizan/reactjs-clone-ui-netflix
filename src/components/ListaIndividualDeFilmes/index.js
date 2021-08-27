@@ -6,7 +6,7 @@ import useGet from '../../services/hooks/useGet';
 import basicFecth from '../../services/basicFecth';
 
 
-const ListaIndividualDeFilmes = ({ slug, titulo, endpoint }) => {
+const ListaIndividualDeFilmes = ({ slug, titulo }) => {
 
     const [items, setItems] = useState(null) // items começa null para criarmos um IF
     const [scrollX, setScrollX] = useState(0)
