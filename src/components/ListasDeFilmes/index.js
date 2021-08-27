@@ -6,7 +6,7 @@ const ListaDeFilmes = () => {
 
     return (
         <div className='linhaDeFilmes'>
-            <ListaIndividualDeFilmes slug={'originais'} titulo={'Originais Netflix'} endpoint={'/discover/tv?with_network=213&'} />
+            <ListaIndividualDeFilmes slug={'originais'} titulo={'Originais Netflix'} />
             <ListaIndividualDeFilmes slug={'trending'} titulo={'Recomendados para Você'} endpoint={'/trending/all/week?'} />
             <ListaIndividualDeFilmes slug={'toprated'} titulo={'Em Alta'} endpoint={'/movie/top_rated?'} />
             <ListaIndividualDeFilmes slug={'action'} titulo={'Ação'} endpoint={'/discover/movie?with_genres=28&'} />
