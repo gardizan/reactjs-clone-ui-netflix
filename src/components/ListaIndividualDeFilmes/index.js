@@ -5,15 +5,12 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import useGet from '../../services/hooks/useGet';
 import basicFecth from '../../services/basicFecth';
 import completeFetch from '../../services/completeFetch';
-import { objectTypeAnnotation } from '@babel/types';
 
 
-const ListaIndividualDeFilmes = ({ slug, titulo}) => {
+const ListaIndividualDeFilmes = ({ slug, titulo }) => {
 
     const [items, setItems] = useState(null) // items começa null para criarmos um IF
     const [scrollX, setScrollX] = useState(0)
-
-    
 
     // Esse useEffect tem a missão de incrementar a constante items, usando setItems.
     // Lembrando ser apenas uma vez, quando carrega o componente
