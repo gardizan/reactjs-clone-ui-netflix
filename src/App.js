@@ -5,21 +5,23 @@ import ListaDeFilmes from './components/ListasDeFilmes';
 import FilmeDestaque from './components/FilmeDestaque';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Loading from './components/Loading'
+import Loading from './components/Loading';
 
 
 function App() {
-
+  
   const [listaFilmes, setListaFilmes] = useState([])
   const [filmeDestaqueData, setFilmeDestaqueData] = useState(null)
   const [generos, setGeneros] = useState(null)
   const [headerEfeito, setHeaderEfeito] = useState(false)
+  
 
   useEffect(() => {
     const carregarTudo = async () => {
       //Pegando a Lista total
       const lista = await Tmdb.getHomeList()
       setListaFilmes(lista)
+      
 
       //Pegando Filme destaque
       const originais = lista.filter(i => i.slug === 'originals')
@@ -35,6 +37,7 @@ function App() {
         setGeneros(genero.name)
       })
       setFilmeDestaqueData(filmeEscolhidoInfo)
+      
     }
     carregarTudo()
   }, [])
@@ -51,6 +54,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', escutandoScroll)
     }
+    
   }, [])
 
   return (
@@ -63,9 +67,7 @@ function App() {
       }
 
       <section className='listas'>
-        {listaFilmes.map((item, key) => (
-          <ListaDeFilmes key={key} titulo={item.titulo} items={item.items} />
-        ))}
+          <ListaDeFilmes />
       </section>
 
       <Footer />
